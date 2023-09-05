@@ -10,7 +10,7 @@ export class LoginComponent {
 
 public miFormu!:FormGroup;
 
-constructor(private fb:FormBuilder) {
+constructor(private fb:FormBuilder,private login:AutentifacionService ) {
 
 }
 
@@ -28,6 +28,10 @@ private createMyForm():FormGroup{
 
 public submitFormulario(){
  if(this.miFormu.invalid){
+  Object.values(this.miFormu.controls).forEach(control=>{
+control.markAllAsTouched();
+  });
+  
   return;
  }
 

@@ -6,13 +6,15 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AutentificacionComponent } from './autentificacion/autentificacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    AutentificacionComponent
   ],
   imports: [
     BrowserModule,
