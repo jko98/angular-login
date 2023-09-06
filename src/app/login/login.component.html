@@ -1,7 +1,7 @@
 <div class="container-fluid">
     
         <div class="col-3 center" >
-            <form [formGroup]="miFormu" (ngSubmit)="submitFormulario()" class="">
+            <form [formGroup]="miFormu" (ngSubmit)="submitFormulario()">
                 <div class="mb-4">
                     <label for="" class="form-label">Email</label>
                     <input formControlName="usuario" [class.is-invalid]="f.usuario.errors && f.usuario.touched" type="email" id="" placeholder="Email" class="form-control">

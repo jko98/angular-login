@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AutentificacionComponent } from '../autentificacion/autentificacion.component';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ export class LoginComponent {
 
 public miFormu!:FormGroup;
 
-constructor(private fb:FormBuilder,private login:AutentifacionService ) {
+constructor(private fb:FormBuilder,private loginHyz:AutentificacionComponent) {
 
 }
 
@@ -36,8 +37,10 @@ control.markAllAsTouched();
  }
 
 
- alert("Se enviara el formulario")
- console.log(this.miFormu.value)
+
+ if(!this.loginHyz.ingresarApp(this.miFormu.value)){
+  alert("Usuario o contraseña invalidos")
+ }
 }
 
 public get f():any{

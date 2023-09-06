@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AutentificacionComponent } from './autentificacion/autentificacion.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-login';
 
-  public visualizar(){
+  constructor(private loginHyz:AutentificacionComponent){
     
+  }
+
+
+  public visualizar():boolean{
+    return this.loginHyz.habilitarlogin();
   }
 }

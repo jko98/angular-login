@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">
             <app-header></app-header>
-            <app-login></app-login>
+            <app-login *ngIf="!visualizar()"></app-login>
             <app-dashboard *ngIf="visualizar()"></app-dashboard>
         </div>
     </div>
